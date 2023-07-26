@@ -26,3 +26,15 @@ export const getRecipeService = async (drinkID) => {
         throw new Error("hubo un error al obtener una bebida")
     }
 }
+
+/* export const getDrink = async (drinkID) => {
+    try {
+        const {strDrink} = await getRecipeService(drinkID)
+        const url = `${apiUrl}search.php?s=${strDrink}`
+        const {data} = await axios.get(url)
+
+        return data.drinks[0] || []
+    } catch (error) {
+        throw new Error("hubo un error al obtener una bebida")
+    }
+} */

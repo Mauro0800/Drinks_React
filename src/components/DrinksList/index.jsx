@@ -1,5 +1,5 @@
 import { Row } from "react-bootstrap"
-import useDrinks from "../../hooks/useDrinks"
+import useDrinks from "../../hooks/UseDrinks"
 import { DrinkCard } from "../DrinkCard"
 
 

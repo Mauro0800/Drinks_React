@@ -2,7 +2,7 @@ import { ErrorMessage, Field, Formik } from 'formik'
 import { Button, Col, Form, Row} from 'react-bootstrap'
 import * as Yup from 'yup'
 import UseCategories from '../../hooks/UseCategories'
-import useDrinks from '../../hooks/useDrinks'
+import useDrinks from '../../hooks/UseDrinks'
 
 export const SearchForm = () => {
 

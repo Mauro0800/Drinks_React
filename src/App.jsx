@@ -5,21 +5,24 @@ import { DrinksProvider } from './context/DrinksProvider'
 import { AuthProvider } from './context/AuthProvider'
 import { MainLayout } from './layouts'
 import { AppRoutes } from "./routes"
+import { BrowserRouter } from 'react-router-dom'
 
 function App() {
 
   return (
-    <AuthProvider>
-      <CategoriesProvider>
-        <DrinksProvider>
-          <CartProvider>
-            <MainLayout>
-              <AppRoutes/>
-            </MainLayout>
-          </CartProvider>
-        </DrinksProvider>
-      </CategoriesProvider>
-    </AuthProvider>
+    <BrowserRouter>
+      <AuthProvider>
+        <CategoriesProvider>
+          <DrinksProvider>
+            <CartProvider>
+              <MainLayout>
+                <AppRoutes />
+              </MainLayout>
+            </CartProvider>
+          </DrinksProvider>
+        </CategoriesProvider>
+      </AuthProvider>
+    </BrowserRouter>
   )
 }
 

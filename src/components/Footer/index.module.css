@@ -1,10 +1,9 @@
 .footer{
-    
-    background-color: silver;
     color: white;
+    background-color: silver;
+    padding: 1em 0; 
     text-align: center;
-    position: sticky;
-    width: 100%;
+    position: absolute;
     bottom: 0;
-    left: 0;
+    width: 100%;
 }

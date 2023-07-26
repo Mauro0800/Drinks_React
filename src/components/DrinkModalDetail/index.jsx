@@ -1,5 +1,5 @@
 import { Col, Image, Modal, Row, Button } from "react-bootstrap"
-import useDrinks from "../../hooks/useDrinks"
+import useDrinks from "../../hooks/UseDrinks"
 import useCart from '../../hooks/useCart'
 import { types } from '../../types'
 import { getDrinkById } from "../../helpers"

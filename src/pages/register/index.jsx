@@ -1,8 +1,12 @@
 import { ErrorMessage, Field, Formik } from 'formik'
 import { Button, Col, Form, Row } from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom'
 import * as Yup from 'yup'
+import { registerAuthService } from '../../services/auth.service'
 
 export const Register = () => {
+
+    const navigate = useNavigate()
 
     const initialValues = {
         name: "",
@@ -16,8 +20,10 @@ export const Register = () => {
         password: Yup.string().required('El password es obligatoria'),
     })
 
-    const handleSubmit = (values) => {
-        console.log(values);
+    const handleSubmit = async (values) => {
+        const response = await registerAuthService(values)
+        console.log(response);
+        navigate("/login")
     }
 
     return (
@@ -29,7 +35,7 @@ export const Register = () => {
             >
                 {
                     (formik) => (
-                        <Form onSubmit={formik.handleSubmit}>
+                        <Form onSubmit={formik.handleSubmit} className='col-6 mx-auto'>
 
                             <Form.Group>
                                 <Form.Label htmlFor="name">Nombre</Form.Label>
@@ -67,7 +73,7 @@ export const Register = () => {
                             </Form.Group>
 
                             <Row className='justify-content-end mt-3'>
-                                <Col md={3}>
+                                <Col md={4}>
                                     <Button variant="dark" disabled={false} className="w-100" type='submit'>
                                         Registrate
                                     </Button>
